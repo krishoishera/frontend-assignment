@@ -9,7 +9,7 @@ import {Router} from "@angular/router";
 })
 export class LoginComponent implements OnInit {
   loginForm = new FormGroup({
-      emailaddress: new FormControl('', Validators.required),
+      emailaddress: new FormControl('', [Validators.required, Validators.email]),
       password: new FormControl('', Validators.required),
     });
   constructor(private router: Router) { }
