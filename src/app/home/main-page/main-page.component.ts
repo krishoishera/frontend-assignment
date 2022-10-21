@@ -37,7 +37,7 @@ export class MainPageComponent implements OnInit {
         this.dataSource.sort = this.sort;
       },
       error: (err) => {
-        this._snackBar.open(err.message, 'Close');
+        this._snackBar.open(err.message, 'Close', {duration: 3000});
       }
     });
   }
@@ -45,14 +45,14 @@ export class MainPageComponent implements OnInit {
   RemoveEmployee(index: number) {
     this.api.deleteEmployee(this.employees[index].id).subscribe({
       next: () => {
-        this._snackBar.open("Employee removed", 'Close');
+        this._snackBar.open("Employee removed", 'Close', {duration: 3000});
         this.employees.splice(index, 1);
         this.dataSource = new MatTableDataSource<EmployeeData>(this.employees);
         this.dataSource.paginator = this.paginator;
         this.dataSource.sort = this.sort;
       },
       error: (err) => {
-        this._snackBar.open(err.message, 'Close');
+        this._snackBar.open(err.message, 'Close', {duration: 3000});
       }
     });
   }
@@ -63,7 +63,7 @@ export class MainPageComponent implements OnInit {
         this.communcation.changeEmployee(data.data);
         this.router.navigate(['home/employees/' + id]).then(r => console.log(r));
       }, error: (err) => {
-        this._snackBar.open(err.message, 'Close');
+        this._snackBar.open(err.message, 'Close', {duration: 3000});
       }
     });
   }

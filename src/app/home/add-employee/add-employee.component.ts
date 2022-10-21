@@ -28,9 +28,9 @@ export class AddEmployeeComponent implements OnInit {
 
   onSubmit() {
     this.api.addEmployee(<EmployeeData>this.addForm.value).subscribe(res => {
-      this._snackBar.open(res.status, 'Close');
+      this._snackBar.open(res.status, 'Close', {duration: 3000});
     }, err => {
-      this._snackBar.open(err.message, 'Close');
+      this._snackBar.open(err.message, 'Close', {duration: 3000});
     });
   }
 
