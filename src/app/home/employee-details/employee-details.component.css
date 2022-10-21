@@ -1,0 +1,9 @@
+.details-page {
+  position: relative;
+  width: 100%;
+  top: 10vh;
+}
+.card {
+  width: 70%;
+  margin: 0 auto;
+}

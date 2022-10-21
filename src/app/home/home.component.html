@@ -1,0 +1,14 @@
+<nav class="navbar fixed-top navbar-dark bg-dark">
+  <div class="container-fluid">
+    <div class="nav-main">
+      <a class="navbar-brand"><img width="50" height="50" src="/assets/logo.png"></a>
+      <button class="btn btn-sm btn-outline-success" type="button" (click)="openDialog()">Add Employee</button>
+    </div>
+    <form class="justify-content-start">
+      <button class="btn btn-sm btn-outline-secondary" type="button" (click)="onLogout()">Logout</button>
+    </form>
+  </div>
+
+</nav>
+
+<router-outlet></router-outlet>

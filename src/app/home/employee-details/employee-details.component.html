@@ -1,0 +1,26 @@
+<div class="details-page">
+  <div class="container">
+    <div class="card">
+      <div class="card-body">
+       <form>
+        <fieldset disabled>
+          <legend>{{employee.employee_name}} Details</legend>
+          <div class="mb-3">
+            <label for="disabledTextInput" class="form-label">Full Name</label>
+            <input type="text" id="disabledTextInput" [value]="employee.employee_name" class="form-control" placeholder="Disabled input">
+          </div>
+          <div class="mb-3">
+            <label for="disabledTextInput1" class="form-label">Salary</label>
+            <input type="text" id="disabledTextInput1" value="{{employee.employee_salary | number}} SAR" class="form-control" placeholder="Disabled input">
+          </div>
+           <div class="mb-3">
+            <label for="disabledTextInput2" class="form-label">Age</label>
+            <input type="text" id="disabledTextInput2" value="{{employee.employee_age}} Years old" class="form-control" placeholder="Disabled input">
+          </div>
+        </fieldset>
+         <button [routerLink]="['/home/employees']" class="btn btn-primary">Back</button>
+      </form>
+      </div>
+    </div>
+  </div>
+</div>

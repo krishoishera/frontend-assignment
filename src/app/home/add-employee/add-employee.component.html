@@ -1,0 +1,30 @@
+<div class="container-fluid">
+  <h1>Add Emoloyee</h1>
+  <div class="card">
+    <div class="card-body">
+      <div class="add-form">
+        <form [formGroup]="addForm" (ngSubmit)="onSubmit()">
+          <div class="form-input">
+            <div class="mb-3">
+              <label for="exampleFormControlInput1" class="form-label">Name</label>
+              <input formControlName="employee_name" type="text" class="form-control" id="exampleFormControlInput1" placeholder="name">
+            </div>
+            <div class="mb-3">
+              <label for="exampleFormControlTextarea1" class="form-label">Salary</label>
+              <input formControlName="employee_salary" class="form-control" type="text" id="exampleFormControlTextarea1" placeholder="salary">
+            </div>
+            <div class="mb-3">
+              <label for="exampleFormControlTextarea2" class="form-label">Age</label>
+              <input formControlName="employee_age" class="form-control" type="number" id="exampleFormControlTextarea2" placeholder="age">
+            </div>
+          </div>
+
+          <button [mat-dialog-close]="true" [disabled]="addForm.status !== 'VALID'" type="submit" class="btn btn-primary">Add Employee</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+
+
+</div>
